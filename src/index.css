@@ -1,0 +1,103 @@
+/* =====================================================
+   RESET GLOBAL
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: #f5f6fa;
+  font-family: "DM Sans", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+
+  /* 🚨 ESTO QUITA LOS BORDES DEL TEMPLATE DE VITE */
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+
+/* =====================================================
+   ROOT DEL DASHBOARD
+===================================================== */
+
+.usuario-root {
+  width: 100% !important;
+  min-width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f5f6fa;
+}
+
+
+/* =====================================================
+   ELEMENTOS GENERALES
+===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: "DM Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   QUITAR ESTILOS DEL TEMPLATE INICIAL
+===================================================== */
+
+#center,
+#next-steps,
+#docs,
+#spacer,
+.ticks,
+.counter {
+  all: unset;
+}

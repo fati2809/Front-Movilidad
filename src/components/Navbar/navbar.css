@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
+:root {
+  --primary: #2A3086;
+  --accent: #E63289;
+  --soft: #92C4D7;
+  --white: #FFFFFF;
+  --bg: #F6F8FC;
+  --text-soft: #5F6475;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+  width: 100%;
+  height: 82px;
+
+  background: #2A3086; /* azul institucional */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 45px;
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,.15);
+
+  font-family: 'DM Sans', sans-serif;
+
+  position: relative;
+  z-index: 100;
+}
+
+
+/* LOGO */
+
+.navbar-left {
+  display:flex;
+  align-items:center;
+}
+
+
+.logo {
+  width:80px;
+  height:auto;
+  object-fit:contain;
+}
+.navbar .logo {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: contain;
+}
+
+
+/* MENU */
+
+.nav-links {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  list-style:none;
+
+}
+
+
+
+/* BOTONES */
+
+.nav-btn {
+
+  border:none;
+
+  background:transparent;
+
+  color:white;
+
+  font-family:'DM Sans',sans-serif;
+
+  font-size:.95rem;
+
+  font-weight:600;
+
+  padding:12px 20px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  transition:.25s ease;
+
+}
+
+
+.nav-btn:hover {
+
+  background:rgba(255,255,255,.15);
+
+  transform:translateY(-2px);
+
+}
+
+
+
+/* ACTIVO */
+
+.nav-btn.active {
+
+  background:white;
+
+  color:#2A3086;
+
+}
+
+
+
+/* CERRAR SESIÓN */
+
+.logout {
+
+  color:white;
+
+  border:1.5px solid #E63289;
+
+}
+
+
+.logout:hover {
+
+  background:#E63289;
+
+  color:white;
+
+}

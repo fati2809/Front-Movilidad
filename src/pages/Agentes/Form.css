@@ -1,0 +1,479 @@
+:root {
+  --primary: #2A3086;
+  --accent: #E63289;
+  --soft: #92C4D7;
+  --white: #FFFFFF;
+  --black: #111111;
+  --bg: #F6F8FC;
+  --text-soft: #5F6475;
+}
+
+.solicitud-page,
+.solicitud-page * {
+  box-sizing: border-box;
+}
+
+.solicitud-page {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* =========================
+   PAGE
+========================= */
+
+.solicitud-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.solicitud-container {
+  width: 100%;
+  padding: 50px 20px 80px;
+  overflow: visible;
+}
+
+.solicitud-card {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  background: var(--white);
+
+  border-radius: 26px;
+
+  padding: 45px;
+
+  box-shadow: 0 10px 36px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+.solicitud-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.solicitud-subtitle {
+  font-size: 1rem;
+  color: var(--text-soft);
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.solicitud-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  border: 1.5px solid #D8DCEC;
+
+  border-radius: 14px;
+
+  padding: 14px 16px;
+
+  font-size: 0.95rem;
+
+  outline: none;
+
+  transition: 0.2s ease;
+
+  background: #fff;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  color: #111111;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #7A8094;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 4px rgba(230, 50, 137, 0.12);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  background: var(--accent);
+
+  color: var(--white);
+
+  border: none;
+
+  padding: 15px 34px;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  box-shadow:
+    0 8px 24px rgba(230, 50, 137, 0.25);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  background: #cb2476;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .solicitud-container {
+    padding: 30px 16px 60px;
+  }
+
+  .solicitud-card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .solicitud-title {
+    font-size: 2rem;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FILE INPUT
+========================= */
+
+.custom-file-input {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.custom-file-input input[type="file"] {
+  display: none;
+}
+
+.custom-file-box {
+  width: 100%;
+  height: 52px;
+
+  border: 1.5px solid #D8DCEC;
+  border-radius: 14px;
+
+  background: #fff;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+
+  transition: 0.2s ease;
+}
+
+.custom-file-box:hover {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 0 4px rgba(230, 50, 137, 0.08);
+}
+
+.file-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-icon {
+  color: var(--primary);
+}
+
+.file-placeholder {
+  color: #7A8094;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+/* ==========================
+   SELECT
+========================== */
+
+.form-group select {
+  width: 100%;
+  height: 48px;
+  padding: 0 45px 0 14px;
+
+  border: 1px solid #d9dce5;
+  border-radius: 10px;
+
+  background: #fff;
+  color: #2A3086;
+
+  font-size: 15px;
+  font-family: inherit;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  outline: none;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: #2A3086;
+  box-shadow: 0 0 0 3px rgba(42, 48, 134, .12);
+}
+
+/* Contenedor para la flecha */
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Flecha personalizada */
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.select-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+.email-suggestions {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  z-index: 1000;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.email-option {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.email-option:hover {
+  background: #eef3ff;
+  color: #2A3086;
+  font-weight: 600;
+}
+
+.signature-container {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+
+.signature-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-clear-signature {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.signature-container {
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+
+.signature-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-clear-signature {
+
+  margin-top:10px;
+
+  padding:8px 15px;
+
+  border:none;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+}
+/* ==========================
+   VERIFICACIÓN DE CORREO
+========================== */
+.label-with-button{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    margin-bottom:8px;
+}
+
+.label-with-button label{
+    margin:0;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--primary);
+    flex:1;
+}
+
+.btn-inline{
+    flex-shrink:0;
+
+    background:#2A3086;
+    color:#fff;
+
+    border:none;
+    border-radius:6px;
+
+    padding:4px 12px;
+
+    font-size:.78rem;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+
+.btn-inline:hover:not(:disabled){
+    background:#1d246d;
+}
+
+.btn-inline:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+.input-button-group{
+    display:flex;
+    align-items:flex-end;
+    gap:8px;
+}
+
+.input-button-group input{
+    flex:1;
+    height:36px;
+}
+
+.btn-small{
+    height:36px;
+    padding:0 10px;
+    font-size:12px;
+    border-radius:6px;
+    white-space:nowrap;
+    width:auto;
+}
+
+.btn-small{
+    height:38px;
+    padding:0 12px;
+    font-size:13px;
+    white-space:nowrap;
+}
